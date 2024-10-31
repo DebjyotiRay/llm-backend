@@ -25,8 +25,10 @@ def get_genes_and_citations():
     prompt = (
         f"Answer the following biomedical question in a very specific manner, "
         f"providing only the names of the genes or causes when asked. Do not explain anything extra "
-        f"unless specifically asked in the user query. Provide citations to support your answer, "
-        f"included with links. Highlight only the main keywords or genes:\n\n{user_input}"
+        f"unless specifically asked in the user query. Provide citations[and their corresponding links] to support your answer,included with links.  "
+        f"Scrape the internet for accurate and precise answers and their corresponding citations; and IF you do not find any CITATIONS, then send a message:"
+        f"Not able to scrape citations for this question. but DO NOT HALLUCINATE or CREATE DUMMY LINKS. Recheck your answers with live web scraping for better accuracy and precision."
+        f"Highlight only the main keywords or genes:\n\n{user_input}"
     )
 
     try:
